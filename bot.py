@@ -5,6 +5,7 @@ import config
 from config import DISCORD_TOKEN
 
 from Prompts.personality import build_roast_prompt
+from LLM.gemini import GeminiLLM
 
 # Intents
 intents = discord.Intents.default()
@@ -16,13 +17,25 @@ class DiscordRoastBot(discord.Client):
         self.tree = app_commands.CommandTree(self)
 
     async def setup_hook(self):
+        # Sync slash commands
         await self.tree.sync()
 
     async def on_ready(self):
         print(f'Logged in as {self.user}')
         print('------')
 
+# Create bot instance
 client = DiscordRoastBot()
+
+# Initialize LLM (Gemini)
+llm = GeminiLLM()
+
+''' LLM Test Code (in case you want to test the LLM independently)
+from LLM.gemini import GeminiLLM
+llm = GeminiLLM()
+prompt = "Say something witty about the weather."
+print(llm.generate(prompt))
+'''
 
 # /ping command
 @client.tree.command(name="ping", description="Test Command")
@@ -43,16 +56,21 @@ async def roast(
     username: str,
     about: str | None = None
 ):
-    # Build prompt (LLM not used yet)
+    # Defer the response immediately (prevents 404 for slow LLM)
+    await interaction.response.defer()
+
+    # Build prompt with persona
     prompt = build_roast_prompt(username, about)
 
-    # Dummy response
-    dummy_roast = (
-        f"Ah yes, {username}. "
-        "One observes thee and immediately understands why silence was invented."
-    )
+    # Generate roast via LLM
+    try:
+        roast_text = llm.generate(prompt)
+    except Exception:
+        # Fallback if API fails
+        roast_text = "Sir Roastington declines to speak. How tragic."
 
-    await interaction.response.send_message(dummy_roast)
+    # Send response
+    await interaction.followup.send(roast_text)
 
-# Run the bot (must be last)
+# Run the bot
 client.run(DISCORD_TOKEN)

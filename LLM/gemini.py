@@ -11,7 +11,7 @@ class GeminiLLM(RoastLLM):
         genai.configure(api_key=config.API_KEY)
 
         # Use a fast, text-only model
-        self.model = genai.GenerativeModel("gemini-1.5-flash")
+        self.model = genai.GenerativeModel("gemini-flash-latest")
 
     def generate(self, prompt: str) -> str:
         try:
@@ -27,6 +27,7 @@ class GeminiLLM(RoastLLM):
             # Enforce max length from base class
             return self._enforce_length(text)
 
-        except Exception:
+        except Exception as e:
             # Fallback for safety blocks, rate limits, etc.
+            print("Gemini API error:", e)
             return "Sir Roastington was censored by lesser minds."
