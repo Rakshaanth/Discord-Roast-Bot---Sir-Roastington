@@ -32,7 +32,7 @@ Flask (optional keep-alive)
 
 Replit 
 
---
+---
 ## Personality
 
 **Sir Roastington**
@@ -46,15 +46,25 @@ Replit
 ## Project Structure
 
 ├── bot.py # Main Discord bot entry point
+
 ├── config.py # Environment variable loader & validation
+
 ├── requirements.txt # Python dependencies
+
 ├── LLM/
+
 │ ├── init.py
+
 │ ├── base.py # Abstract LLM interface
+
 │ └── gemini.py # Gemini LLM implementation
+
 ├── Prompts/
+
 │ ├── init.py
+
 │ └── personality.py # Sir Roastington prompt builders
+
 └── .gitignore
 
 
