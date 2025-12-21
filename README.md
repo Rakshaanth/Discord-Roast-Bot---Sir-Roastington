@@ -54,15 +54,11 @@ Replit (cloud)
 
 ├── LLM/
 
-│ ├── init.py
-
 │ ├── base.py # Abstract LLM interface
 
 │ └── gemini.py # Gemini LLM implementation
 
 ├── Prompts/
-
-│ ├── init.py
 
 │ └── personality.py # Sir Roastington prompt builders
 
