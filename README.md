@@ -7,6 +7,7 @@ He judges usernames, bios, and conversations with aristocratic disappointment.
 
 ## Features
 
+- `/ping` — says "pong 🥁"(fun, and good for testing!)
 - `/roast` — Roast a user by name (and optional bio)
 - `/decode` — Translate the previous roast into simple modern English
 - `/sir` — Ask Sir Roastington any question  
@@ -30,7 +31,7 @@ Google Gemini API
 
 Flask (optional keep-alive)
 
-Replit 
+Replit (cloud)
 
 ---
 ## Personality
