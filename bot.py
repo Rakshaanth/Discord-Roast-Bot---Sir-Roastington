@@ -150,9 +150,10 @@ async def sir(interaction: discord.Interaction, question: str):
 ------------Postscript------------
 Just for deployment keep-alive purposes.
 '''
-
 from flask import Flask
 from threading import Thread
+import os
+
 app = Flask("")
 
 @app.route("/")
@@ -160,9 +161,8 @@ def home():
     return "Alive"
 
 def run():
-    app.run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=3000)
 
-# Start keep-alive server thread **before** running the bot
 Thread(target=run).start()
 ''' ------------End of Postscript------------'''
 
