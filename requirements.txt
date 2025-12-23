@@ -1,5 +1,5 @@
 discord.py
 python-dotenv
 aiohttp
-flask & replit (optional) / host on VM
+flask 
 google-generativeai
