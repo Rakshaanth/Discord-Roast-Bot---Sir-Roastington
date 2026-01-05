@@ -1,0 +1,72 @@
+Privacy Policy – Sir Roastington Bot
+
+Last Updated: January 4, 2026
+
+1. Information We Collect
+
+Discord User Data: Only collects publicly available username, profile picture, and “About” information when interacting with bot commands.
+
+Interaction Logs: Temporary in-memory storage for processing /decode or /sir commands; no permanent storage.
+
+LLM Queries: Sent to Google Gemini API for text generation. Only prompts needed for functionality are transmitted.
+
+2. How We Use Information
+
+Generate roasts, explanations, and answers for Discord commands.
+
+Maintain correct contextual responses (e.g., previous messages for /decode or mentions in /sir).
+
+Never share, sell, or publicly display user data.
+
+3. Data Retention
+
+All Discord message data accessed is temporary; bot does not store any personal messages permanently.
+
+Only short-term memory is used for generating context-aware responses in real-time.
+
+4. Third-Party Services
+
+Google Gemini API is used for LLM text generation. User input is sent to this API for processing only.
+
+5. User Rights
+
+You may disable or remove the bot from your server at any time.
+
+Bot respects Discord’s privacy policies and community guidelines.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Terms & Conditions – Sir Roastington Bot
+
+Last Updated: January 4, 2026
+
+1. Acceptance of Terms
+
+By interacting with Sir Roastington Bot, you agree to abide by these Terms & Conditions.
+
+2. Usage Rules
+
+Do not use the bot to harass, threaten, or spread malicious content.
+
+Roasts and outputs are for entertainment purposes only.
+
+3. Intellectual Property
+
+The bot, codebase, and associated content are owned by the developer.
+
+You may not redistribute or claim ownership of the bot code or content without permission.
+
+4. Limitation of Liability
+
+The bot is provided “as-is” without warranty.
+
+The developer is not responsible for any indirect, incidental, or consequential damages arising from its use.
+
+5. Termination
+
+Developer may terminate or suspend bot functionality without notice if misuse occurs.
+
+6. Modifications
+
+Terms and Privacy Policy may be updated at any time. Users are encouraged to review them periodically.
